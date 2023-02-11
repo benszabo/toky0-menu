@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 720px) {
+  .pdf-viewer {
+    width: 75vw;
+    height: 95vh;
+  }
+}
