@@ -1,13 +1,14 @@
-import pdfFile from './Tokyo_Menu.pdf';  // replace 'sample.pdf' with your PDF file name
 import './App.css';
 
 function App() {
   return (
     <div className="App">
  <iframe
-          src={pdfFile}
+          src={process.env.PUBLIC_URL + "/Tokyo_Menu.pdf"}
           title="PDF Viewer"
-          className="pdf-viewer"
+          height="100%"
+          style={{position: 'fixed', overflow: 'auto', height: '100vh' }}
+          width="100%"
         />
     </div>
   );
