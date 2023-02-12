@@ -7,7 +7,7 @@ function App() {
           src={process.env.PUBLIC_URL + "/Tokyo_Menu.pdf"}
           title="PDF Viewer"
           height="100%"
-          style={{position: 'fixed', overflow: 'auto', height: '100vh' }}
+          style={{ height: '100vh' }}
           width="100%"
         />
     </div>
