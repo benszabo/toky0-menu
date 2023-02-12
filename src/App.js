@@ -1,17 +1,19 @@
+import React, { Component } from 'react';
 import './App.css';
+import PDFViewer from './components/PDFViewer';
+import PDFJSBackend from './backends/pdfjs';
 
-function App() {
-  return (
-    <div className="App">
- <iframe
-          src={process.env.PUBLIC_URL + "/Tokyo_Menu.pdf"}
-          title="PDF Viewer"
-          height="100%"
-          style={{ overflow: 'scroll', height: '100vh' }}
-          width="100%"
-        />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <PDFViewer 
+          backend={PDFJSBackend}
+          src='/Tokyo_Menu.pdf'
+        />      
+      </div>
+    );
+  }
 }
 
 export default App;
