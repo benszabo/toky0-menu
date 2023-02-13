@@ -9,3 +9,8 @@ html, body, #root, .App {
   margin-right: auto;
   width: 50%;
 }
+
+.padded {
+  padding-right: 30px;
+  padding-left: 30px;
+}
