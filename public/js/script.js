@@ -30,20 +30,26 @@ const addEventOnElements = function (elements, eventType, callback) {
 
 
 /**
- * NAVBAR
- */
 
+NAVBAR
+*/
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
 
 const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
+navbar.classList.toggle("active");
+overlay.classList.toggle("active");
+document.body.classList.toggle("nav-active");
 }
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
+document.querySelectorAll('.navbar-link').forEach(link => {
+link.addEventListener('click', () => {
+toggleNavbar();
+document.body.classList.remove('nav-active');
+})
+})
 
 
 
